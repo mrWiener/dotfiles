@@ -1,12 +1,12 @@
 # Show remaining battery time; hide percentage
-defaults write com.apple.menuextra.battery ShowPercent -string "NO"
-defaults write com.apple.menuextra.battery ShowTime -string "YES"
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+defaults write com.apple.menuextra.battery ShowTime -string "NO"
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
 # Expand print panel by default
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool false
 
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
@@ -28,7 +28,7 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Enable tap to click (Trackpad) for this user and for the login screen
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool false
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
@@ -80,7 +80,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Enable “focus follows mouse” for Terminal.app and all X11 apps
-# This means you can hover over a window and start typing in it without clicking first
+# This means you can hover over a window and start typing in it without clickingda first
 defaults write com.apple.terminal FocusFollowsMouse -bool true
 defaults write org.x.X11 wm_ffm -bool true
 
@@ -94,8 +94,8 @@ defaults write com.apple.iTunes disablePing -bool true
 defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
 
 # Disable send and reply animations in Mail.app
-defaults write com.apple.Mail DisableReplyAnimations -bool true
-defaults write com.apple.Mail DisableSendAnimations -bool true
+defaults write com.apple.Mail DisableReplyAnimations -bool false
+defaults write com.apple.Mail DisableSendAnimations -bool false
 
 # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
